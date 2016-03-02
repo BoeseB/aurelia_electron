@@ -8,6 +8,15 @@
                var window = BrowserWindow.getFocusedWindow();
                window.minimize(); 
           });
+          
+          document.getElementById("max-btn").addEventListener("click", function (e) {
+            var window = BrowserWindow.getFocusedWindow();
+            if(window.isMaximized() === false){
+              window.maximize();
+            } else {
+              window.unmaximize();
+            }
+          }); 
 
           document.getElementById("close-btn").addEventListener("click", function (e) {
                var window = BrowserWindow.getFocusedWindow();

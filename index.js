@@ -22,7 +22,7 @@ app.on('ready', function () {
         height: 600,
         frame: false
     });
-    mainWindow.setMenu(null);
+    //mainWindow.setMenu(null);
 
     mainWindow.loadUrl('file://' + __dirname + '/index.html');
     mainWindow.webContents.on('did-finish-load', function () {

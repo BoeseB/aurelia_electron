@@ -7,22 +7,44 @@ body {
  padding: 0px;
  margin: 0px;
  background-color: #EEEEEE;
- border: 1px solid #68217A;
- border-bottom: 24px solid #68217A;
+ border: 1px solid dodgerblue;
  position: absolute;
  top: 0px;
  left: 0px;
  right: 0px;
  bottom: 0px;
+ overflow: hidden;
 }
 
-#title-bar {
+#main-viewport{
+ width: 100%; 
+ top: 32px;
+ bottom:24px;
+ position: absolute;  
+ overflow: hidden;
+}
+
+#title-bar {  
+ -webkit-user-select: none;
  -webkit-app-region: drag;
+ width: 100%; 
  height: 32px; 
  padding: 0px;
  margin: 0px; 
- color: #ADADAD;
+ color: #909090;
  font-family: sans-serif;
+}
+
+#status-bar{
+ width: 100%; 
+ height: 24px; 
+ padding: 0px;
+ bottom: 0px;
+ margin: 0px; 
+ color: #EEEEEE;
+ background-color: dodgerblue;
+ font-family: sans-serif;  
+ position: absolute;  
 }
 
 #title {
@@ -33,11 +55,19 @@ body {
  font-size: 14px;
 }
 
+#status {
+ position: fixed;
+ bottom: 0px;
+ left: 12px; 
+ line-height: 24px;
+ font-size: 12px;
+}
+
 #title-bar-btns {
  -webkit-app-region: no-drag;
  position: fixed;
  top: 1px;
- right: 0px; 
+ right: 1px; 
 }
 
 #title-bar-btns button {
@@ -59,5 +89,5 @@ body {
 }
 
 a {
-  color: #68217A;
+  color: dodgerblue;
 }
