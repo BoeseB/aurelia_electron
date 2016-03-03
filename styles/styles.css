@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  heigth: 100%;
 }
 
 .splash {
@@ -24,13 +25,11 @@ body {
 }
 
 .page-host {
-  position: absolute;
-  margin: 0;
-  top: 50px;
-  bottom:0;
   width:100%;
   overflow-x: auto;
   overflow-y: auto;
+  display: block;
+  flex-grow: 1;
 }
 
 @media print {
@@ -47,6 +46,7 @@ body {
 section {
   margin: 0 20px;
 }
+
 
 .navbar-nav li.loader {
   margin: 12px 24px 0 6px;
