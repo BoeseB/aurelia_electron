@@ -22,6 +22,7 @@ app.on('ready', function () {
         height: 600,
         frame: false
     });
+    //Uncomment next line to disable menu shortcuts
     //mainWindow.setMenu(null);
 
     mainWindow.loadUrl('file://' + __dirname + '/index.html');
