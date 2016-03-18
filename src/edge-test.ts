@@ -1,17 +1,18 @@
-import {edge} from 'edge';
-
+var remote = require('remote');
 export class EdgeTest
 {
-  myInput = 'TypeScript'
+  
+  private edge = remote.require('electron-edge')
+  myInput = 'TypeScript';
   myResult = '';
-  var helloWorld = edge.func(function () {
-      /*async (input) => { return ".NET Welcomes " + input.ToString()}*/
-    });
+  private helloWorld = this.edge.func(    
+    `async (input) => { return ".NET Welcomes " + input.ToString();}`
+  );
     
   submit() {
-    helloWorld(myInput, function(error, result) {
+    this.helloWorld(this.myInput, function(error, result) {
       if(error) throw error;
-      myResult = result;
-    }
+      this.myResult = result;
+    });
   }
 }
